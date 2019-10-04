@@ -22,12 +22,12 @@ namespace WordCounter.Testing
         [TestMethod]
         public void CleanList_CheckIfOutputIsListofWords_ListofWords()
         {
-            List<string> listofWords = new List<string>() {"This", "is", "an","example","of","a","valid","input.", "It", "even", "takes", "things", "like", "extra", "character$."};
+            string[]listofWords = new string[] {"This", "is", "an","example","of","a","valid","input.", "It", "even", "takes", "things", "like", "extra", "character$."};
 
-            List<string> expected =  new List<string>() {"this", "is", "an","example","of","a","valid","input", "it", "even", "takes", "things", "like", "extra", "character$"};
-            List<string> actual = RepeatCounter.CleanList(listofWords);
+            List<string> expected =  new List<string>(){"this", "is", "an","example","of","a","valid","input", "it", "even", "takes", "things", "like", "extra", "character$"};
+           List<string> actual = RepeatCounter.CleanList(listofWords);
 
-            Assert.AreEqual(expected,actual);
+            CollectionAssert.AreEqual(expected,actual);
         }
 
         [TestMethod]
