@@ -38,7 +38,7 @@ namespace WordCounter.Testing
             List<string> expected =  new List<string>() {"this", "is", "an","example","of","a","valid","input", "it", "even","will", "take","few", "things", "like", "extra", "character$"};
             List<string> actual = RepeatCounter.UniqueValues(cleanedWords);
 
-            Assert.AreEqual(expected,actual);
+            CollectionAssert.AreEqual(expected,actual);
         }
 
         [TestMethod]
