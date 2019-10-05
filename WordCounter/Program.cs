@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 namespace WordCounter
 {
     public class Program
     {
         public static void Main()
         {
-            MainMenu();
+            Process.Start("/Applications/Google Chrome.app","https://www.google.com");
         }
 
         public static void MainMenu()
